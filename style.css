@@ -1,0 +1,26 @@
+h3{
+    color: aqua;
+}
+
+p{
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+}
+.cs{
+    color: blueviolet;
+}
+/* 选择器嵌套 */
+p b{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    font-style: italic;
+    /* color: maroon;颜色 */
+    /* letter-spacing: normal;字符间距 */
+    /* line-height: normal;行高 */
+    /* text-align: justify;对齐方式 */
+    /* text-decoration:line-through;文本装饰效果 */
+    /* text-indent: 0px;缩进 */
+    /* text-transform: uppercase;控制文字大小写 */
+    /* word-spacing: 0cm; 单词间距 */
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>my html</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -7,19 +8,30 @@
     <meta name="author" content="boom">
     <meta name="keyword" content=".....">
     <meta name="description" content="...">
+    <style type="">
+        h2{
+        color:rgb(182, 56, 56);
+        }
+        /* 优先级：内联>内部>import>link @import url()一般不用; */
+        </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<<<<<<< HEAD
 
 <body>
     <iframe name="topFrame" scrolling="auto" src="https://www.baidu.com" width="100%" height="400px" frameborder="0">
-   
     </iframe>
-
     <p><a href="https://www.sina.com.cn" target="topFrame">新浪</a></p>
-
-    <h2>JavaScript 对象</h2>
-    <hr/>
-    <p id="demo" ></p>
+    <p><a href="https://www.lzccyx.cn" target="topFrame">boom</a></p>
+    <h2 style="color:bisque; font-size: 20px; text-decoration: underline;">JavaScript 对象</h2>
+    <!--内联样式优先-->
+    <h3>CSS标题1</h3>
+    <p>外部样式引入</p>
+    <h3>CSS标题2</h3>
+    <p>外部样式引入</p>
+    <p>嵌套使<b>用<b>css</b></b>标记的方法</p>
+        嵌套之外的<b>标记</b>不生效
+    <hr />
+    <p id="demo"></p>
     <hr>
     <div id="position">
         <h3>position</h3>
@@ -27,9 +39,9 @@
             <li>home</li>
             <li>school</li>
         </ul>
-    <hr/>
+        <hr />
     </div>
-    
+
     <div id="fruit">
         <h3>fruits</h3>
         <ol>
@@ -37,28 +49,31 @@
             <li>apple</li>
             <li>H<sub>2</sub>o</li>
         </ol>
-    <hr/>
+        <hr />
     </div>
-    
+
     <div id="school">
         <dl>
-            <dt><h3>zhejiang university of technology</h3></dt>
+            <dt>
+                <h3>zhejiang university of technology</h3>
+            </dt>
             <dd>屏峰校区</dd>
             <dd>朝晖校区</dd>
             <dd>莫干山校区</dd>
         </dl>
-        <hr/>
+        <hr />
     </div>
-    
+
     <div id="demo_1">
         <span>&copy;</span>
     </div>
     <form name="boomForm" action="https://www.xxxx.com.cn" enctype="application/x-www-form-urlencoded" method="POST">
-        <label for="username">单行文本框</label> <input type="text" readonly="readonly" maxlength="10" name="username" id="username"><br>
+        <label for="username">单行文本框</label> <input type="text" readonly="readonly" maxlength="10" name="username"
+            id="username"><br>
         <label for="password"> 密码框</label> <input type="password" size="10" name="password" id="password"><br>
         影藏域<input type="hidden" name="hidden" id="hidden"><br>
-        单选按钮<input type="radio" name="sex" id="male" checked="checked" >男<br>
-               <input type="radio" name="sex" id="female">女<br>
+        单选按钮<input type="radio" name="sex" id="male" checked="checked">男<br>
+        <input type="radio" name="sex" id="female">女<br>
         复选框<input type="checkbox" name="hobby" value="1" id="football" disabled="disabled">足球<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox" name="hobby" value="2" id="basketball" checked="checked">篮球<br>
@@ -67,7 +82,7 @@
         图像域<input type="image" src="/logo.png" width="100px" height="20px" name="hobby" id="football"><br>
         文件上传域<input type="file" name="file"><br>
         提交按钮<input type="submit" name="submit" value="提交的按钮"><br>
-        重置按钮<input type="reset"  name="submit" value="重置的按钮"><br>
+        重置按钮<input type="reset" name="submit" value="重置的按钮"><br>
         普通按钮<input type="button" name="submit" value="自定义按钮"><br>
         button提交按钮<button type="submit" name="submit2">提交按钮</button><br>
         button重置按钮<button type="reset" name="reset2"><b>重置按钮</b></button><br>
@@ -76,42 +91,51 @@
             <optgroup label="一线城市">
                 <option value="1">Beijing</option>
                 <option value="2">Shanghai</option>
-            </optgroup>  
+            </optgroup>
             <optgroup label="二线城市">
                 <option value="3">Hangzhou</option>
                 <option value="4">Guangzhou</option>
             </optgroup>
-        </select><hr>
-        下拉菜单<select name="city" id="city2" >
+        </select>
+        <hr>
+        下拉菜单<select name="city" id="city2">
             <optgroup label="一线城市">
                 <option value="1">Beijing</option>
                 <option value="2">Shanghai</option>
-            </optgroup>  
+            </optgroup>
             <optgroup label="二线城市">
                 <option value="3">Hangzhou</option>
                 <option value="4">Guangzhou</option>
             </optgroup>
         </select><br>
-        <textarea name="textArea" id="textArea" cols="30" rows="10" readonly="readonly" >
+        <textarea name="textArea" id="textArea" cols="30" rows="10" readonly="readonly">
 1.too many requests;
 2.you don't ask anything.
         </textarea>
     </form>
     <hr>
-    <h3>xxxxxxxxxxx</h3>
     <script>
-        var obj = {counter:0};
-         Object.defineProperty(obj,"reset",{
-             get : function(){this.counter = 0;}
-         });
-         Object.defineProperty(obj,"increment",{
-             get : function(){this.counter++;}
-         });
-         Object.defineProperty(obj,"decrement",{
-             get : function () {this.counter--;}
-         });
-         obj.inrement;
+        var obj = {
+            counter: 0
+        };
+        Object.defineProperty(obj, "reset", {
+            get: function () {
+                this.counter = 0;
+            }
+        });
+        Object.defineProperty(obj, "increment", {
+            get: function () {
+                this.counter++;
+            }
+        });
+        Object.defineProperty(obj, "decrement", {
+            get: function () {
+                this.counter--;
+            }
+        });
+        obj.inrement;
         document.getElementById('demo').innerHTML = obj.counter;
     </script>
 </body>
+
 </html>
