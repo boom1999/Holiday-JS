@@ -7,9 +7,7 @@ p{
     font-size: 20px;
     font-weight: bold;
 }
-.cs{
-    color: blueviolet;
-}
+
 /* 选择器嵌套 */
 p b{
     font-family: Georgia, 'Times New Roman', Times, serif;

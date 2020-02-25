@@ -8,12 +8,26 @@
     <meta name="author" content="boom">
     <meta name="keyword" content=".....">
     <meta name="description" content="...">
-    <style type="">
-        h2{
+    <style type="text/css">
+        div#fruit h2{
         color:rgb(182, 56, 56);
         }
+        .test1{
+            border-right: 5px solid palevioletred;
+            border-left: 5px dashed peachpuff;
+        }
+        .test2{
+            border-right: 5px solid palevioletred;
+            border-left:10px dashed peachpuff;
+        }
         /* 优先级：内联>内部>import>link @import url()一般不用; */
-        </style>
+        #three{
+            width: 200px;
+            height: 300px;
+            border-color: rgb(163, 75, 75);
+            border-style: dotted;
+        }
+    </style>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,6 +38,7 @@
     <p><a href="https://www.lzccyx.cn" target="topFrame">boom</a></p>
     <h2 style="color:bisque; font-size: 20px; text-decoration: underline;">JavaScript 对象</h2>
     <!--内联样式优先-->
+    <p id="three">带边框的p标签</p>
     <h3>CSS标题1</h3>
     <p>外部样式引入</p>
     <h3>CSS标题2</h3>
@@ -34,7 +49,7 @@
     <p id="demo"></p>
     <hr>
     <div id="position">
-        <h3>position</h3>
+        <h2>position</h2>
         <ul>
             <li>home</li>
             <li>school</li>
@@ -43,7 +58,7 @@
     </div>
 
     <div id="fruit">
-        <h3>fruits</h3>
+        <h2>fruits</h2>
         <ol>
             <li>banana</li>
             <li>apple</li>
@@ -114,6 +129,8 @@
         </textarea>
     </form>
     <hr>
+    <img src="/logo.png" alt="背景图片" class="test1"><hr>
+    <img src="/logo.png" alt="背景图片" class="test2">
     <script>
         var obj = {
             counter: 0
@@ -137,5 +154,4 @@
         document.getElementById('demo').innerHTML = obj.counter;
     </script>
 </body>
-
 </html>
