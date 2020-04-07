@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建元素</title>
+    <script>
+        function create(){
+            var city = document.getElementById("city");
+            var element = document.createElement("li");
+            element.innerHTML="南京"
+            // city.appendChild(element);
+            // city.insertBefore(element,city.firstChild.nextSibling);
+            // city.replaceChild(element,city.firstChild.nextSibling);
+        }
+
+        function copy(){
+            var city = document.getElementById("city");
+            var element = city.firstChild.nextSibling.cloneNode(true);
+            city.appendChild(element);
+        }
+
+        function del(){
+            var city = document.getElementById("city");
+            var element = city.firstChild.nextSibling;
+            city.removeChild(element);
+        }
+    </script>
+</head>
+<body>
+    <ul id="city">
+        <li>北京</li>
+        <li>上海</li>
+    </ul>
+    <input type="button" value="创建复制替换节点" onclick="create()">
+    <input type="button" value="复制节点" onclick="copy()">
+    <input type="button" value="删除节点" onclick="del()">
+</body>
+</html>
