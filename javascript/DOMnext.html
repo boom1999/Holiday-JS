@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查找表单控件</title>
+    <script type="text/javascript">
+        function operatorForm(){
+            var myForm = document.forms[0];
+            // alert(myForm.action);
+            // alert(myForm.method);
+            // alert(myForm.target);
+            // myForm.submit();
+            myForm.reset();
+        }
+    </script>
+</head>
+<body>
+    <form id="myForm" action="https://www.lzccyx.cn" method="get" target="_blank">
+        <input type="text" name="username" value="lzc"><br>
+        <input type="text" name="password" value="123456"><br>
+        <select name="city" id="">
+            <option value="shanghai">上海</option>
+            <option value="nanjing" selected="selected">南京</option>
+        </select><br>
+        <input type="button" value="获取表单内第一个控件" onclick="javascript:alert(document.getElementById('myForm').elements[0].value);">
+        <input type="button" value="获取表单内第二个控件" onclick="javascript:alert(document.getElementById('myForm').elements['password'].value);">
+        <input type="button" value="获取表单内第三个控件" onclick="javascript:alert(document.getElementById('myForm').city.value)">
+        <input type="button" value="操作表单" onclick="operatorForm()">
+    </form>
+</body>
+</html>
