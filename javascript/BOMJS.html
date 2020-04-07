@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOMJS</title>
+    <script type="text/javascript">
+        function testConfirm(){
+            var answer = window.confirm("是否退出？");
+            if(answer){
+                window.close();}
+            else{
+                window.alert(":-）");
+            
+            }
+        }
+        function testPrompt(){
+            var res = window.prompt("请输入密码","123");
+            alert(res);
+        }
+        // function testMoveBy(){
+        //     window.moveBy(50,50),
+        // }
+        // function testMoveTo(){
+        //    window.moveto(250,250);
+        // }
+        // function testResizeBy(){
+        //     window.resizeBy(50,50);
+        // }
+        // function testResizeTo(){
+        //     window.resizeTo(350,350);
+        // }
+        // function testScrollBy(){
+        //     window.scrollBy(50,50);
+        // }
+        // function testScrollTo(){
+        //     window.scrollTo(150,150);
+        // }
+        function testOpen(){
+            window.open("https://www.lzccyx.cn","lzccyx",'left=20,top=50,width=500,height=300, location=no,toolbar=no,status=no,resizable=no' );
+        }
+        var count = 0;
+        function showTime(){
+            var d = new Date();
+            var hours=d.getHours()
+            if(hours<10){
+                hours="0"+hour;
+            }
+            var minutes=d.getMinutes()
+            if(minutes<10){
+                minutes="0"+minutes;
+            }
+            var seconds=d.getSeconds()
+            if(seconds<10){
+                seconds="0"+seconds;
+            }
+            count++;
+            if(count==10){
+                window.clearInterval(t);
+            }
+            document.getElementById("display").innerHTML=hours+":"+minutes+":"+seconds;
+        }
+        var t=window.setInterval("showTime()",1000);
+    </script>
+</head>
+<body>
+    <input type="button" value="confirm" onclick="testConfirm()">
+    <input type="button" value="prompt" onclick="testPrompt()">
+    <!-- <input type="button" value="moveby" onclick="testMoveBy()">
+    <input type="button" value="moveto" onclick="testMoveTo()">
+    <input type="button" value="resizeBy" onclick="testResizeBy()">
+    <input type="button" value="resizeTo" onclick="testResizeTo()"> -->
+    <!-- <input type="button" value="scrollBy" onclick="testScrollBy">
+    <input type="button" value="scrollTo" onclick="testScrollTo"> -->
+    <input type="button" value="open" onclick="testOpen()">
+    <div id="display">
+        
+    </div>
+</body>
+</html>

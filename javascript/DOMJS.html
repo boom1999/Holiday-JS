@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用getElementById方法查找元素</title>
+    <script type="text/javascript">
+        // function showContent(){
+        //     var myDiv,txtName,content;
+        //     with(document){
+        //         myDiv = getElementById("myDiv");
+        //     content = getElementById("content");
+        //     txtName = getElementById("txtName");
+        //     }
+        //     alert(myDiv.innerHTML+"\n"+content.value+"\n"+txtName.value);
+        // }
+        
+    </script>
+    <style type="text/css">
+        #n4{
+            color:red
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">我的div块</div>
+    <textarea name="content" id="content" cols="30" rows="10">DayDayUp!</textarea><br>
+    <input type="text" id="txtName" value="lzc"><br>
+    <input type="button" id="btn_show" value="访问三个元素的内容" onclick="showContent()">
+    <ul id="names">
+        <li id="n1">张三</li>
+        <li id="n2">李四</li>
+        <li id="n3">王五</li>
+        <li id="n4">赵六</li>
+        <li id="n5">小强</li>
+        <li id="n6">lzc</li>
+    </ul>
+    
+    <input type="button" value="父亲点" onclick="showContent(current.parentNode)">
+    <input type="button" value="第一个子节点" onclick="showContent(current.parentNode.firstElementChild)">
+    <input type="button" value="上一个子节点" onclick="showContent(current.previousSibling.previousSibling)">
+    <input type="button" value="下一个子节点" onclick="showContent(current.nextSibling.nextSibling)">
+    <input type="button" value="最后一个子节点" onclick="showContent(current.parentNode.lastElementChild)">
+    <input type="button" value="得到所有li元素的个数" onclick="showCount()">
+    <!-- .parentNode.firstElementChild==parentNode.firstChild.nextSibling -->
+    <!-- .parentNode.lastElementChild==parentNode.lastChild.previousSibling -->
+    <!-- chrome和 Firefox中换行也算是节点，所以要第一个孩子的下一个才是要找的 -->
+    <script>
+        var current = document.getElementById("n4");
+        function showContent(target){
+            alert(target.innerHTML);
+        }
+        function showCount(){
+            alert(document.getElementsByName("li").length);
+        }
+    </script>
+</body>
+</html>

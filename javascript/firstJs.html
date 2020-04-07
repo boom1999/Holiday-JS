@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // document.write(parseInt('67red') + "<br>");
+        // document.write(parseInt('53.5') + "<br>");
+        // document.write(parseInt('0xC') + "<br>");
+        // document.write(parseInt('shanghai') + "<br><br>");
+
+        // document.write(parseFloat("35chen") + "<br>");
+        // document.write(parseFloat("0xA") + "<br>");
+        //  parsefloat不支持十六进制
+        // document.write(parseFloat("35.34") + "<br>");
+        // document.write(parseFloat("35.34.343") + "<br>");
+        // document.write(parseFloat("shanghai") + "<br>");
+        // var str = "ling-zhi-cheng";
+        // alert(str.length);
+        // alert(str.charAt(5));
+        // alert(str.toUpperCase());
+
+        // alert(str.indexOf('i'));
+        // alert(str.lastIndexOf('i'));
+        // alert(str.indexOf('i',2));
+
+        // alert(str.substring(2));
+        // alert(str.substring(2,4));
+
+        // alert(str.slice(2));
+        // alert(str.slice(2,4));
+        // alert(str.slice(3,-1));   -1是最后一个
+        // alert(str.slice(3,-5));
+
+        // alert(str.replace('ling','Ling'));
+
+        // var arr = str.split('-');
+        // for(i=0;i<arr.length;i++){     字符串切割
+        //     alert(arr[i]);
+        // }
+
+        // alert(str.match('ling'));   返回该字符串
+        // alert(str.match('xxx'));    返回null
+        // alert(str.search("ling"));  返回首下标
+        // alert(str.search("xxx"));   返回-1
+
+
+        // var str = "ling-zhi-cheng";
+        // var reg = /zhi/;
+        // var reg1 = new RegExp('zhi');
+        // var reg_0 = /ZHI/;
+        // alert(reg.exec(str));        exec(str); 找到字符串并返回字符串
+        // alert(reg_0.exec(str));                  没找到字符串并返回null
+        // alert(reg.test(str));        test(str); 找到字符串并返回true
+        // alert(reg_0.test(str));                  没找到字符串并返回false
+
+        // var str = "zhangsan";
+        // var reg = /./;               任何字符
+        // alert(reg.test(str));
+
+        // var phone = "123456";
+        // var reg = /\d/;              小写含有数字
+        // alert(reg.test(phone));
+
+        // var str = "ling zhi";
+        // var reg = /\s/;              小写含有空白字符
+        // alert(reg.test(str));
+
+        // var str = "zhdausd_ad553";
+        // var reg = /\w/;              小写含有数字、下划线、26个字母
+        // alert(reg.test(str));
+
+        // var str = "ling-zhi-cheng";
+        // var reg = /\b/;              匹配字符串边界
+        // alert(reg.test(str));
+        // [0-9] [^abc] [abc] [a-z] [A-z] [A-Z]
+        // n+ n* n? n{X} n{X,Y} n{X,} n$ ^n
+        // i对大小写不敏感匹配  g执行全局匹配    m执行多行匹配
+
+
+        // var arr1 = [2,5,6,"abc",true]; //定义时直接给数组元素赋值
+        // var arr2 = []; //定义一个空数组
+        // var arr3 = new Array(); //定义一个空数组并通过索引来赋值
+        // arr3[0] = 1;     //元素类项可以互不相同     //访问未赋值元素时，undefined
+        // arr3[3] = "abc"; //数组长度可变，总长度为最大索引值+1
+        // for(i=0<i<arr1.length;i++){
+            
+        // }
+    //     show('xxx');
+    //     function show(name){
+    //         alert(name+'您好')
+    //     }
+    //     //命名函数可以在定义之前用会提前加载
+    //    //匿名函数只能在声明之后用
+    //     var f=function (name){
+    //         alert(name+'您好')
+    //     }
+    //     f('yyy')
+    //     // var g = new Function('name','age','alert("名字："+name+",年龄："+age);')
+    //     // g('张三',40);
+    //     // alert(typeof g);
+    //     // alert(g instanceof Function);
+    //     // window.g('zhangsan',40);
+
+    // function show(name,age){
+    //     alert("您好"+name+",今年："+age);
+    // }
+    // // window.show('张三',30);
+    // // show.call(window,'张三',30);
+    // // show.apply(window,['张三',30]);
+
+    // function show(arr,func){
+    //     func.call(window,arr);
+    // }
+    // show([1,2,3],function(arr){
+    //     for(i in arr){
+    //         document.write(arr[i]+"</br>")
+    //     }
+    // })
+
+    // var d1 = new Date();
+    // document.write(d1.toString()+"</br>");
+    // var d2 = new Date("2020-01-06 13:12:30")
+    // document.write(d2.toString()+"</br>");
+    // var d3 = new Date("2020,04,06")
+    // document.write(d3.toString()+"</br>");
+
+    // var d = new Date();
+    // var year = d.getFullYear();
+    // var month = d.getMonth()+1;
+    // var date = d.getDate();
+    // var day = d.getDay();
+    // switch(day){
+    //     case 0:
+    //         day = "星期日";
+    //         break;
+    //     case 1:
+    //         day = "星期一";
+    //         break;
+    //     case 2:
+    //         day = "星期二";
+    //         break;
+    //     case 3:
+    //         day = "星期三";
+    //         break;
+    //     case 4:
+    //         day = "星期四";
+    //         break;
+    //     case 5:
+    //         day = "星期五";
+    //         break;
+    //     case 6:
+    //         day = "星期六";
+    //         break;
+    //     default:
+    //         d = "error date";
+    //         break;
+    // }
+    // document.write("今天是"+year+"年"+month+"月"+date+"日，"+day);
+    </script>
+</head>
+
+<body>
+    
+</body>
+
+</html>
