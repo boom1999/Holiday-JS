@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件监听</title>
+    <script type="text/javascript">
+        function show(sText) {
+            var oDiv = document.getElementById("display");
+            oDiv.innerHTML+=sText;
+        }
+        window.onload = function(){
+            var myBody = document.getElementById("myBody") ;
+            var myDiv = document.getElementById("myDiv") ;
+            var myP = document.getElementById("myP") ;
+            myBody.addEventListener("click",function(){show('body</br>')},true);
+            myDiv.addEventListener("click",function(){show('div</br>')},true);
+            myP.addEventListener("click",function(){show('p</br>')},true);
+        }
+        function handle(oEvent){
+            if(window.event){
+                oEvent = window.event;
+            }
+            var oTarget;
+            if(oEvent.srcElement){
+                oTarget = oEvent.srcElement;
+            }else{
+                oTarget = oEvent.target;
+            }
+            alert(oTarget.tagName);
+        }
+
+        window.onload = function(){
+           var oImg = document.getElementsByTagName("img")[0];
+            oImg.onclick = handle;
+        }
+    </script>
+</head>
+<body id="myBody">
+    <div id="myDiv">
+        <p id="myP">click me</p>
+    </div>
+    <div id="display"></div>
+    <img src="/logo.png" alt="" ,border="0">
+</body>
+</html>
